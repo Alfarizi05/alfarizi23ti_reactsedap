@@ -1,16 +1,25 @@
-import { BsBorderStyle } from "react-icons/bs";  
-import { AiOutlineShoppingCart } from "react-icons/ai"; 
+import { BsBorderStyle } from "react-icons/bs";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
-import { MdSpaceDashboard } from "react-icons/md"; 
-import { Link } from "react-router-dom"; 
+import { MdSpaceDashboard } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
-    <div id="sidebar" className="flex min-h-screen w-90 flex-col bg-white p-10 shadow-lg">
+    <div
+      id="sidebar"
+      className="flex min-h-screen w-90 flex-col bg-white p-10 shadow-lg"
+    >
       {/* Logo */}
       <div id="sidebar-logo" className="flex flex-col mb-10">
-        <span id="logo-title" className="font-poppins text-[48px] text-gray-900">
-          Sedap <b id="logo-dot" className="text-hijau">.</b>
+        <span
+          id="logo-title"
+          className="font-poppins text-[48px] text-gray-900"
+        >
+          Sedap{" "}
+          <b id="logo-dot" className="text-hijau">
+            .
+          </b>
         </span>
         <span id="logo-subtitle" className="font-semibold text-gray-400">
           Modern Admin Dashboard
@@ -36,7 +45,7 @@ export default function Sidebar() {
             to="/orders"
             className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold"
           >
-            <BsBorderStyle className="mr-4 text-xl"/>
+            <BsBorderStyle className="mr-4 text-xl" />
             Orders
           </Link>
 
@@ -46,7 +55,7 @@ export default function Sidebar() {
             to="/customers"
             className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold"
           >
-            <AiOutlineShoppingCart className="mr-4 text-xl"/>
+            <AiOutlineShoppingCart className="mr-4 text-xl" />
             Customer
           </Link>
 
@@ -56,7 +65,7 @@ export default function Sidebar() {
             to="/users"
             className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold"
           >
-            <AiOutlineShoppingCart className="mr-4 text-xl"/>
+            <AiOutlineShoppingCart className="mr-4 text-xl" />
             User
           </Link>
 
@@ -66,7 +75,7 @@ export default function Sidebar() {
             to="/error/400"
             className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold"
           >
-            <BsBorderStyle className="mr-4 text-xl"/>
+            <BsBorderStyle className="mr-4 text-xl" />
             Error 400
           </Link>
           <Link
@@ -74,7 +83,7 @@ export default function Sidebar() {
             to="/error/401"
             className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold"
           >
-            <BsBorderStyle className="mr-4 text-xl"/>
+            <BsBorderStyle className="mr-4 text-xl" />
             Error 401
           </Link>
           <Link
@@ -82,10 +91,18 @@ export default function Sidebar() {
             to="/error/403"
             className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold"
           >
-            <BsBorderStyle className="mr-4 text-xl"/>
+            <BsBorderStyle className="mr-4 text-xl" />
             Error 403
           </Link>
+          <Link 
+            id="menu-7"
+            to="/products" 
+            className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold">
+            <AiOutlineShoppingCart className="mr-4 text-xl" />
+            Products
+          </Link>
         </li>
+        <li></li>
       </ul>
 
       {/* Footer */}
@@ -114,10 +131,7 @@ export default function Sidebar() {
         <span id="footer-brand" className="font-bold text-gray-400">
           Sedap Restaurant Admin Dashboard
         </span>
-        <p
-          id="footer-copyright"
-          className="font-light text-gray-400"
-        >
+        <p id="footer-copyright" className="font-light text-gray-400">
           &copy; 2025 All Right Reserved
         </p>
       </div>

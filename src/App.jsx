@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import "./assets/tailwind.css";
 import React, { Suspense } from "react";
 
+// Lazy loading of components
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Customers = React.lazy(() => import("./pages/Customers"));
 const Orders = React.lazy(() => import("./pages/Orders"));
@@ -14,11 +15,8 @@ const Register = React.lazy(() => import("./pages/auth/Register"));
 const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 const Loading = React.lazy(() => import("./components/Loading"));
 const SedapGuestPage = React.lazy(() => import("./pages/SedapGuestpage"));
-// const Navbar = React.lazy(() => import("./components/Navbar"));
-// const Footer = React.lazy(() => import("./components/ErrorPage"));
-// const About = React.lazy(() => import("./components/ErrorPage"));
-// const Produk = React.lazy(() => import("./components/ErrorPage"));
-// const Testimoni = React.lazy(() => import("./components/ErrorPage"));
+const Products = React.lazy(() => import("./pages/Products"));
+const ProductDetail = React.lazy(() => import("./pages/ProductDetail"));
 
 export default function App() {
   return (
@@ -30,9 +28,11 @@ export default function App() {
           <Route path="/orders" element={<Orders />} />
           <Route path="/customers" element={<Customers />} />
           <Route path="/users" element={<UserPage />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
         </Route>
 
-        {/* Auth layout */}
+        {/* Auth layout for authentication pages */}
         <Route element={<AuthLayout />}>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
