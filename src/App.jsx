@@ -17,6 +17,7 @@ const Loading = React.lazy(() => import("./components/Loading"));
 const SedapGuestPage = React.lazy(() => import("./pages/SedapGuestpage"));
 const Products = React.lazy(() => import("./pages/Products"));
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"));
+const Notes = React.lazy(() => import("./pages/Notes"));
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/customers" element={<Customers />} />
           <Route path="/users" element={<UserPage />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/notes" element={<Notes />} />
           <Route path="/products/:id" element={<ProductDetail />} />
         </Route>
 

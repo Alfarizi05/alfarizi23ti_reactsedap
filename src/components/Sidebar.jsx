@@ -3,6 +3,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
 import { MdSpaceDashboard } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { BiNote } from "react-icons/bi";
 
 export default function Sidebar() {
   return (
@@ -100,6 +101,13 @@ export default function Sidebar() {
             className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold">
             <AiOutlineShoppingCart className="mr-4 text-xl" />
             Products
+          </Link>
+          <Link 
+            id="menu-8"
+            to="/notes" 
+            className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold">
+            <BiNote className="mr-4 text-xl" />
+            notes
           </Link>
         </li>
         <li></li>
